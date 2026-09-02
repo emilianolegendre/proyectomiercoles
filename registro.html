@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Crear cuenta — AulaViva</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="auth.css">
+
+</head>
+
+<body>
+
+    <main class="auth-page">
+
+        <section class="auth-card">
+
+            <div class="auth-logo">
+
+                <div class="logo-chip logo-school">
+                    T
+                </div>
+
+                <div class="logo-chip logo-project">
+                    4
+                </div>
+
+                <strong>
+                    Tecnica<span style="color:#6d947d;">N4</span>
+                </strong>
+
+            </div>
+
+
+            <div class="auth-eyebrow">
+                AulaViva
+            </div>
+
+
+            <h1 class="auth-title">
+                Crear cuenta
+            </h1>
+
+
+            <p class="auth-subtitle">
+                Registrate para acceder al sistema.
+            </p>
+
+
+            <form action="registro.php" method="POST">
+
+
+                <div class="form-group">
+
+                    <label
+                        class="form-label"
+                        for="id_usuario">
+
+                        Usuario
+
+                    </label>
+
+                    <input
+                        class="form-control"
+                        type="text"
+                        id="id_usuario"
+                        name="id_usuario"
+                        placeholder="Ej: emiliano123"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label
+                        class="form-label"
+                        for="nombre">
+
+                        Nombre
+
+                    </label>
+
+                    <input
+                        class="form-control"
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Ej: Emiliano"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label
+                        class="form-label"
+                        for="apellido">
+
+                        Apellido
+
+                    </label>
+
+                    <input
+                        class="form-control"
+                        type="text"
+                        id="apellido"
+                        name="apellido"
+                        placeholder="Ej: Legendre"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label
+                        class="form-label"
+                        for="password">
+
+                        Contraseña
+
+                    </label>
+
+                    <input
+                        class="form-control"
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Ej: 1234"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label
+                        class="form-label"
+                        for="institucion">
+
+                        Institución
+
+                    </label>
+
+                    <input
+                        class="form-control"
+                        type="text"
+                        id="institucion"
+                        name="institucion"
+                        placeholder="Ej: Técnica N°4">
+
+                </div>
+
+
+                <!--
+                    NO ponemos selector de rol.
+
+                    Todo usuario nuevo empieza como
+                    estudiante.
+
+                    El administrador después podrá cambiar
+                    el rol.
+                -->
+
+
+                <button
+                    class="btn-auth"
+                    type="submit">
+
+                    Crear cuenta
+
+                </button>
+
+
+            </form>
+
+
+            <div class="auth-footer">
+
+                ¿Ya tenés una cuenta?
+
+                <a href="login.html">
+                    Iniciar sesión
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

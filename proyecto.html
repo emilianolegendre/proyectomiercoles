@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>AulaViva — Proyecto</title>
+
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-custom container-fluid px-4 px-lg-5">
+
+    <div class="d-flex align-items-center gap-3">
+
+        <div class="brand-logos">
+
+            <div class="logo-chip school">
+                T
+            </div>
+
+            <div class="logo-chip project">
+                4
+            </div>
+
+        </div>
+
+
+        <a
+            class="navbar-brand brand mb-0"
+            href="home.html">
+
+            Tecnica<span class="accent">N4</span>
+
+        </a>
+
+    </div>
+
+
+    <a
+        href="index.html"
+        class="btn btn-outline-custom btn-sm">
+
+        ← Volver
+
+    </a>
+
+</nav>
+
+
+
+<!-- =====================================================
+     CONTENIDO
+===================================================== -->
+
+<main class="container project-page">
+
+
+    <!-- =================================================
+         INFORMACIÓN DEL PROYECTO
+    ================================================== -->
+
+    <section class="project-page-header">
+
+        <div>
+
+            <div class="eyebrow">
+
+                <span class="pulse-dot"></span>
+
+                Proyecto de monitoreo
+
+            </div>
+
+
+            <!-- TÍTULO -->
+
+            <h1 id="nombreProyectoPagina">
+
+                Cargando proyecto...
+
+            </h1>
+
+
+            <!-- PERSONA -->
+
+            <p
+                id="personaProyectoPagina"
+                class="project-page-subtitle">
+
+                Cargando información...
+
+            </p>
+
+
+            <!-- DESCRIPCIÓN -->
+
+            <p
+                id="descripcionProyectoPagina"
+                class="project-page-subtitle">
+
+                —
+
+            </p>
+
+        </div>
+
+
+        <div
+            id="estadoProyectoPagina"
+            class="project-page-status">
+
+            ● Activo
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         INFORMACIÓN
+    ================================================== -->
+
+    <section class="project-current-data">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="eyebrow">
+                    Información
+                </div>
+
+                <h2>
+                    Sobre este proyecto
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- PERSONA -->
+
+            <div class="col-md-6">
+
+                <article class="project-data-card">
+
+                    <div class="project-data-icon">
+                        👤
+                    </div>
+
+                    <span>
+                        Realizado por
+                    </span>
+
+                    <strong id="usuarioProyecto">
+                        —
+                    </strong>
+
+                    <small>
+                        Usuario responsable del proyecto
+                    </small>
+
+                </article>
+
+            </div>
+
+
+
+            <!-- PROYECTO -->
+
+            <div class="col-md-6">
+
+                <article class="project-data-card">
+
+                    <div class="project-data-icon">
+                        📋
+                    </div>
+
+                    <span>
+                        Proyecto
+                    </span>
+
+                    <strong id="idProyecto">
+                        —
+                    </strong>
+
+                    <small>
+                        Identificador del proyecto
+                    </small>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         TEMPERATURAS
+    ================================================== -->
+
+    <section class="project-history">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="eyebrow">
+                    Registro
+                </div>
+
+                <h2>
+                    Temperaturas registradas
+                </h2>
+
+                <p>
+                    Acá se muestran las mediciones almacenadas
+                    por los sensores.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CUANDO NO HAY MEDICIONES
+        ================================================== -->
+
+        <div
+            id="sinMediciones"
+            class="empty-history">
+
+            <div class="empty-projects-icon">
+                📊
+            </div>
+
+            <h3>
+                Todavía no hay mediciones
+            </h3>
+
+            <p>
+                Las temperaturas aparecerán acá
+                cuando existan registros guardados.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             TABLA
+        ================================================== -->
+
+        <div
+            id="tablaHistorialContainer"
+            class="history-table-container"
+            style="display: none;">
+
+            <div class="table-responsive">
+
+                <table class="table history-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                #
+                            </th>
+
+                            <th>
+                                Fecha
+                            </th>
+
+                            <th>
+                                Hora
+                            </th>
+
+                            <th>
+                                MQ-5
+                            </th>
+
+                            <th>
+                                DHT11
+                            </th>
+
+                            <th>
+                                DS18B20
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="historialTabla">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MENSAJE
+    ================================================== -->
+
+    <section class="project-chart-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="eyebrow">
+                    Monitoreo
+                </div>
+
+                <h2>
+                    Evolución de las mediciones
+                </h2>
+
+                <p>
+                    Las temperaturas se registran mediante
+                    los sensores conectados al proyecto.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="chart-placeholder">
+
+            <div>
+                🌡️
+            </div>
+
+            <h3>
+                Datos de temperatura
+            </h3>
+
+            <p>
+                Las mediciones almacenadas se pueden
+                consultar en la tabla superior.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<script src="proyecto.js"></script>
+
+</body>
+
+</html>

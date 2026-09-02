@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Panel de administración — AulaViva</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="admin.css">
+
+</head>
+
+<body>
+
+<main class="admin-page">
+
+    <div class="admin-container">
+
+        <!-- HEADER -->
+
+        <header class="admin-header">
+
+            <div>
+
+                <div class="eyebrow">
+                    AULAVIVA · ADMINISTRACIÓN
+                </div>
+
+                <h1>
+                    Panel de administración
+                </h1>
+
+                <p>
+                    Administrá usuarios y proyectos de la plataforma.
+                </p>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <a
+                    href="../index.php"
+                    class="btn-secondary">
+
+                    Volver al inicio
+
+                </a>
+
+                <button
+                    onclick="cerrarSesion()"
+                    class="btn-danger-outline">
+
+                    Cerrar sesión
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- MENSAJE -->
+
+        <div
+            id="mensaje"
+            class="mensaje"
+            style="display:none;">
+
+        </div>
+
+
+        <!-- USUARIOS -->
+
+        <section class="admin-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <span class="card-kicker">
+                        USUARIOS
+                    </span>
+
+                    <h2>
+                        Gestionar roles
+                    </h2>
+
+                    <p>
+                        Asigná el rol correspondiente a cada usuario.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Usuario
+                            </th>
+
+                            <th>
+                                Nombre
+                            </th>
+
+                            <th>
+                                Apellido
+                            </th>
+
+                            <th>
+                                Rol actual
+                            </th>
+
+                            <th>
+                                Nuevo rol
+                            </th>
+
+                            <th>
+                                Acción
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="listaUsuarios">
+
+                        <tr>
+
+                            <td
+                                colspan="6"
+                                class="loading">
+
+                                Cargando usuarios...
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROYECTOS -->
+
+        <section class="admin-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <span class="card-kicker">
+                        PROYECTOS
+                    </span>
+
+                    <h2>
+                        Gestionar proyectos
+                    </h2>
+
+                    <p>
+                        Como administrador podés editar o eliminar cualquier proyecto.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="listaProyectos"
+                class="projects-grid">
+
+                <div class="loading">
+                    Cargando proyectos...
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+<!-- MODAL EDITAR PROYECTO -->
+
+<div
+    id="modalEditar"
+    class="modal">
+
+    <div class="modal-box">
+
+        <div class="modal-header">
+
+            <div>
+
+                <span class="card-kicker">
+                    ADMINISTRADOR
+                </span>
+
+                <h2>
+                    Editar proyecto
+                </h2>
+
+            </div>
+
+            <button
+                class="modal-close"
+                onclick="cerrarModal()">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <input
+            type="hidden"
+            id="editarId">
+
+
+        <label>
+            Título
+        </label>
+
+        <input
+            type="text"
+            id="editarTitulo"
+            class="input">
+
+
+        <label>
+            Descripción
+        </label>
+
+        <textarea
+            id="editarDescripcion"
+            class="input textarea"></textarea>
+
+
+        <label>
+            Usuario propietario
+        </label>
+
+        <input
+            type="text"
+            id="editarUsuario"
+            class="input">
+
+
+        <div class="modal-actions">
+
+            <button
+                class="btn-secondary"
+                onclick="cerrarModal()">
+
+                Cancelar
+
+            </button>
+
+            <button
+                class="btn-primary"
+                onclick="guardarProyecto()">
+
+                Guardar cambios
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,484 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    background: #f7f3ec;
+
+    color: #26332f;
+}
+
+.admin-page {
+    min-height: 100vh;
+
+    padding: 45px 20px;
+}
+
+.admin-container {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.admin-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 35px;
+}
+
+.eyebrow,
+.card-kicker {
+    color: #6d947d;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+.admin-header h1 {
+    margin: 7px 0 8px;
+
+    font-size: 2.3rem;
+
+    font-weight: 700;
+}
+
+.admin-header p {
+    margin: 0;
+
+    color: #777;
+}
+
+.header-actions {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn-secondary,
+.btn-danger-outline,
+.btn-primary,
+.btn-danger {
+    border-radius: 10px;
+
+    padding: 10px 15px;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.btn-secondary {
+    border: 1px solid #d8d8d8;
+
+    background: white;
+
+    color: #26332f;
+}
+
+.btn-secondary:hover {
+    background: #f1f1f1;
+}
+
+.btn-primary {
+    border: none;
+
+    background: #6d947d;
+
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #587c68;
+}
+
+.btn-danger-outline {
+    border: 1px solid #d99a9a;
+
+    background: white;
+
+    color: #a33d3d;
+}
+
+.btn-danger-outline:hover {
+    background: #fff0f0;
+}
+
+.btn-danger {
+    border: none;
+
+    background: #b84a4a;
+
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #963b3b;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.admin-card {
+    background: white;
+
+    border-radius: 20px;
+
+    margin-bottom: 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.06);
+}
+
+.card-header {
+    padding: 27px 30px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.card-header h2 {
+    margin: 6px 0 5px;
+
+    font-size: 1.35rem;
+}
+
+.card-header p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   TABLA
+========================= */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    min-width: 900px;
+
+    border-collapse: collapse;
+}
+
+th {
+    padding: 15px 20px;
+
+    text-align: left;
+
+    background: #fafafa;
+
+    color: #777;
+
+    font-size: 0.78rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 17px 20px;
+
+    border-top: 1px solid #eeeeee;
+
+    font-size: 0.9rem;
+}
+
+.role {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background: #edf5ef;
+
+    color: #50745e;
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+}
+
+.role-select {
+    padding: 9px 10px;
+
+    border: 1px solid #d7d7d7;
+
+    border-radius: 9px;
+
+    background: white;
+
+    font-family: inherit;
+}
+
+.loading {
+    text-align: center;
+
+    padding: 35px;
+
+    color: #777;
+}
+
+
+/* =========================
+   PROYECTOS
+========================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 20px;
+
+    padding: 25px 30px;
+}
+
+.project-card {
+    border: 1px solid #eeeeee;
+
+    border-radius: 16px;
+
+    padding: 22px;
+
+    background: #fff;
+}
+
+.project-card h3 {
+    margin: 8px 0;
+
+    font-size: 1.15rem;
+}
+
+.project-description {
+    color: #777;
+
+    font-size: 0.88rem;
+
+    min-height: 45px;
+}
+
+.project-owner {
+    margin-top: 15px;
+
+    font-size: 0.82rem;
+
+    color: #777;
+}
+
+.project-actions {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+
+/* =========================
+   MENSAJES
+========================= */
+
+.mensaje {
+    padding: 14px 18px;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+
+    font-size: 0.9rem;
+}
+
+.mensaje.exito {
+    background: #e4f5e9;
+
+    color: #27663b;
+}
+
+.mensaje.error {
+    background: #ffe5e5;
+
+    color: #a52a2a;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-box {
+    width: 100%;
+
+    max-width: 550px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    background: white;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 25px;
+}
+
+.modal-header h2 {
+    margin: 5px 0 0;
+}
+
+.modal-close {
+    border: none;
+
+    background: transparent;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    color: #777;
+}
+
+.modal-box label {
+    display: block;
+
+    margin-top: 15px;
+    margin-bottom: 6px;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+}
+
+.input {
+    width: 100%;
+
+    padding: 11px 13px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+.input:focus {
+    border-color: #6d947d;
+}
+
+.textarea {
+    min-height: 110px;
+
+    resize: vertical;
+}
+
+.modal-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .admin-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .header-actions {
+        width: 100%;
+
+        flex-wrap: wrap;
+    }
+
+    .admin-header h1 {
+        font-size: 1.8rem;
+    }
+
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tec4 — Monitoreo en vivo para el aula</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-custom container-fluid px-4 px-lg-5">
+  <div class="d-flex align-items-center gap-3">
+    <div class="brand-logos">
+      <div class="logo-chip school" title="Logo del colegio">T</div>
+      <div class="logo-chip project" title="Logo de AulaViva">4</div>
+    </div>
+    <a class="navbar-brand brand mb-0" href="index.html">Tecnica<span class="accent">N4</span></a>
+  </div>
+  <div class="d-none d-lg-flex align-items-center gap-4">
+    <a href="#sensores" class="nav-link-custom text-decoration-none">Sensores</a>
+    <a href="#como-funciona" class="nav-link-custom text-decoration-none">Cómo funciona</a>
+    <a href="#" class="nav-link-custom text-decoration-none">Ayuda</a>
+  </div>
+  <div class="d-flex gap-2">
+    <a href="login.html" class="btn btn-outline-custom btn-sm">Iniciar sesión</a>
+    <a href="registro.html" class="btn btn-verde btn-sm">Crear cuenta</a>
+  </div>
+</nav>
+
+<div class="container hero">
+  <div class="row align-items-center g-5">
+    <div class="col-lg-6">
+      <div class="eyebrow"><span class="pulse-dot"></span> Datos en tiempo real</div>
+      <h1 class="headline">
+        El aula, medida y<br>
+        <span class="grad">vista en vivo.</span>
+      </h1>
+      <p class="lede">
+        El profesor arma la clase y agrega los sensores que necesita.
+        Los alumnos entran con un código y ven los datos actualizarse
+        en el momento, desde el celu, la tablet o la compu.
+      </p>
+      <div class="d-flex flex-wrap gap-3 mt-4">
+        <a href="register.html" class="btn btn-verde">Crear una clase</a>
+        <a href="#sensores" class="btn btn-outline-custom">Ver sensores disponibles</a>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <span class="hero-card-title">Aula 3° B — Biología</span>
+          <span class="live-tag"><span class="pulse-dot"></span> En vivo</span>
+        </div>
+        <div class="mini-sensor-row">
+          <div class="mini-sensor">
+            <div class="icon">🌡️</div>
+            <div class="val">22°C</div>
+            <div class="lab">Temperatura</div>
+          </div>
+          <div class="mini-sensor">
+            <div class="icon">💧</div>
+            <div class="val">58%</div>
+            <div class="lab">Humedad</div>
+          </div>
+          <div class="mini-sensor">
+            <div class="icon">☀️</div>
+            <div class="val">Alta</div>
+            <div class="lab">Luminosidad</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container section" id="como-funciona">
+  <h2 class="section-title">Cómo funciona</h2>
+  <p class="section-sub">
+    Pensado para que el profesor lo use en clase sin vueltas, y para
+    que el alumno entre en segundos.
+  </p>
+
+  <div class="row g-4">
+    <div class="col-md-4 step-card fade-up">
+      <div class="step-num">1</div>
+      <div>
+        <div class="step-title">El profesor crea la clase</div>
+        <div class="step-text">Arma el aula y elige qué sensores o módulos mostrar. La plataforma genera un código único.</div>
+      </div>
+    </div>
+    <div class="col-md-4 step-card fade-up">
+      <div class="step-num">2</div>
+      <div>
+        <div class="step-title">Los alumnos se unen</div>
+        <div class="step-text">Con el código, cada alumno entra a la clase desde su dispositivo. No hace falta configurar nada más.</div>
+      </div>
+    </div>
+    <div class="col-md-4 step-card fade-up">
+      <div class="step-num">3</div>
+      <div>
+        <div class="step-title">Todos ven lo mismo, en vivo</div>
+        <div class="step-text">Cada cambio que hace el profesor se refleja al instante en la pantalla de todos los alumnos.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container section">
+  <div class="cta-band fade-up">
+    <h3>¿Listo para probarlo en tu clase?</h3>
+    <p>Creá tu cuenta de profesor y armá tu primera aula en vivo en un par de minutos.</p>
+    <a href="register.html" class="btn btn-cta">Crear cuenta gratis</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <div class="logo-chip school">T</div>
+          <div class="logo-chip project">4</div>
+        </div>
+        <div class="footer-brand">Tecnica 4</div>
+        <p style="color:#C9B79A; font-size:0.88rem; max-width:280px;">
+          Un proyecto del Colegio para monitorear el aula en tiempo real,
+          hecho por y para la comunidad educativa.
+        </p>  
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-col-title">Colegio</div>
+        <a href="#">Sitio web</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Contacto</a>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-col-title">Soporte</div>
+        <a href="#">Ayuda</a>
+        <a href="#">Preguntas frecuentes</a>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-col-title">Cuenta</div>
+        <a href="login.html">Iniciar sesión</a>
+        <a href="register.html">Crear cuenta</a>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-col-title">Equipo</div>
+        <p>Desarrolladores</p>
+        <li>Emiliano Legendre</li>
+        <li>Castro Ignacio</li>
+        <li>Leila Luna</li>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Tecnica 4</span>
+      <span>Proyecto escolar de monitoreo en tiempo real</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.fade-up');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.15 });
+  els.forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
